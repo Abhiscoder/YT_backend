@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import { User } from "../models/user.model.js";
 
 
-const varifyJWT = asyncHandler(async (req, res, next) => {
+const varifyJWT = asyncHandler(async (req, _, next) => {  //"res" replace by "_" (underscore) when "res" is not use.
   try {
     const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "");
 
