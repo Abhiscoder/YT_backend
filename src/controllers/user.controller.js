@@ -211,7 +211,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
     throw new ApiError(401, error?.message || "Invalid refresh token")
   }
 })
-//Forget password
+//Forget password 
 const changeCurrentPassword = asyncHandler(async (req, res) => {
   const { oldPassword, newPassword, confPasswrod } = req.body;
 
